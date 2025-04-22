@@ -20,7 +20,8 @@ end
 local Script_Tbl = {
     [7074860883] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Arise%20Crossover",
     [4931927012] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Basketball%20Legends",
-    [5682590751] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Lootify.lua"
+    [5682590751] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Lootify.lua",
+    [6884266247] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Anime-Rangers-X",
 }
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
