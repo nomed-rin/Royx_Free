@@ -43,7 +43,9 @@ game.CoreGui.DescendantAdded:connect(function(Ins)
 	end
 end)
 
-task.spawn(function()
+local Script_Url = Script_Tbl[data.universeId]
+if Script_Url then 
+	task.spawn(function()
 	local TimeScript = os.time()
 	repeat
 		task.wait()
@@ -56,7 +58,5 @@ task.spawn(function()
 		end
 	until dsadasvcxv
 end)
-local Script_Url = Script_Tbl[data.universeId]
-if Script_Url then 
     loadstring(game:HttpGet(Script_Url))()
 end
