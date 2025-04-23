@@ -39,6 +39,20 @@ game.CoreGui.DescendantAdded:connect(function(Ins)
 		until FuckYouHaHa
 	end
 end)
+
+task.spawn(function()
+	local TimeScript = os.time()
+	repeat
+		task.wait()
+		if getgenv().RoyxLoaded then 
+			print("Loaded")
+			return
+		end
+		if TimeScript - os.time() > 90 then 
+			game.Players.LocalPlayer:Kick("Wating Too long")
+		end
+	until dsadasvcxv
+end)
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
     loadstring(game:HttpGet(Script_Url))()
