@@ -1,5 +1,5 @@
 
-getgenv().sundaybypass = true
+
 
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
