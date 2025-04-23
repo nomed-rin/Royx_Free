@@ -45,7 +45,7 @@ task.spawn(function()
 	repeat
 		task.wait()
 		if getgenv().RoyxLoaded then 
-			print("Loaded")
+			print("Royx Loaded")
 			return
 		end
 		if TimeScript - os.time() > 90 then 
