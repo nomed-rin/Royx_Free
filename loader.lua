@@ -1,3 +1,6 @@
+
+getgenv().sundaybypass = true
+
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
 local url = "https://apis.roblox.com/universes/v1/places/" .. placeId .. "/universe"
@@ -48,7 +51,7 @@ task.spawn(function()
 			print("Royx Loaded")
 			return
 		end
-		if TimeScript - os.time() > 90 then 
+		if os.time() - TimeScript > 90 then 
 			game.Players.LocalPlayer:Kick("Wating Too long")
 		end
 	until dsadasvcxv
