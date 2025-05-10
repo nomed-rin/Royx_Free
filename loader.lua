@@ -15,8 +15,12 @@ local success, response = pcall(function()
 	})
 end)
 
+
 if success then
 	data = HttpService:JSONDecode(response.Body)
+	if universeId == 3747388906 then 
+		return 
+	end
 	if data and data.universeId then
 		print("Universe ID:", data.universeId)
 	else
