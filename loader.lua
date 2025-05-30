@@ -1,10 +1,11 @@
---discord.gg/boronide, code generated using luamin.js™
 
 
 
 
 
-
+repeat
+	task.wait()
+until game:IsLoaded()
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
 local url = "https://apis.roblox.com/universes/v1/places/" .. placeId .. "/universe"
