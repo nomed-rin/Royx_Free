@@ -6,6 +6,8 @@ game.CoreGui.DescendantAdded:connect(function(Ins)
 		until FuckYouHaHa
 	end
 end)
+
+
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
 local url = "https://apis.roblox.com/universes/v1/places/" .. placeId .. "/universe"
@@ -16,7 +18,19 @@ local success, response = pcall(function()
 	})
 end)
 
-
+	task.spawn(function()
+		local TimeScript = os.time()
+		repeat
+			task.wait()
+			if getgenv().RoyxLoaded then
+				print("Royx Loaded")
+				return
+			end
+			if os.time() - TimeScript > 90 then
+				game.Players.LocalPlayer:Kick("Wating Too long")
+			end
+		until dsadasvcxv
+	end)
 if success then
 	data = HttpService:JSONDecode(response.Body)
 	if data.universeId == 3747388906 then 
@@ -48,18 +62,5 @@ local RefPlaceId = {
 
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
-	task.spawn(function()
-		local TimeScript = os.time()
-		repeat
-			task.wait()
-			if getgenv().RoyxLoaded then
-				print("Royx Loaded")
-				return
-			end
-			if os.time() - TimeScript > 90 then
-				game.Players.LocalPlayer:Kick("Wating Too long")
-			end
-		until dsadasvcxv
-	end)
 	loadstring(game:HttpGet(Script_Url))()
 end
