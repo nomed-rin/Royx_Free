@@ -1,8 +1,6 @@
 
 
 
-
-
 game.CoreGui.DescendantAdded:connect(function(Ins)
 	if Ins.Name == "LeaveButton" then
 		repeat
@@ -37,13 +35,13 @@ task.spawn(function()
 end)
 if success then
 	data = HttpService:JSONDecode(response.Body)
-	if data.universeId == 3747388906 then 
-		return 
-	end
 	if data and data.universeId then
 		print("Universe ID:", data.universeId)
 	else
 		game.Players.LocalPlayer:Kick("Universe ID not found.")
+	end
+	if data.universeId == 3747388906 then 
+		return 
 	end
 else
 	game.Players.LocalPlayer:Kick("Failed to fetch Universe ID:" ..  response)
