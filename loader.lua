@@ -1,15 +1,6 @@
 
 
 
-game.CoreGui.DescendantAdded:connect(function(Ins)
-	if Ins.Name == "LeaveButton" then
-		repeat
-			task.wait(1)
-			game:GetService("TeleportService"):Teleport(RefPlaceId[data.universeId], game:GetService("Players").LocalPlayer)
-		until FuckYouHaHa
-	end
-end)
-
 
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
@@ -61,6 +52,14 @@ local RefPlaceId = {
 	[6884266247] = 72829404259339,
 }
 
+game.CoreGui.DescendantAdded:connect(function(Ins)
+	if Ins.Name == "LeaveButton" then
+		repeat
+			task.wait(1)
+			game:GetService("TeleportService"):Teleport(RefPlaceId[data.universeId], game:GetService("Players").LocalPlayer)
+		until FuckYouHaHa
+	end
+end)
 
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
