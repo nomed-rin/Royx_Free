@@ -6,6 +6,7 @@ local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
 local url = "https://apis.roblox.com/universes/v1/places/" .. placeId .. "/universe"
 local data 
+local prefix_url = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/"
 local success, response = pcall(function()
 	return request({
 		Url = url
@@ -39,10 +40,10 @@ else
 end
 
 local Script_Tbl = {
-	[7074860883] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Arise%20Crossover",
-	[4931927012] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Basketball%20Legends",
-	[5682590751] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Lootify.lua",
-	[6884266247] = "https://raw.githubusercontent.com/nomed-rin/Royx_Free/refs/heads/main/Anime-Rangers-X",
+	[7074860883] = "Arise%20Crossover",
+	[4931927012] = "Basketball%20Legends",
+	[5682590751] = "Lootify.lua",
+	[6884266247] = "Anime-Rangers-X",
 }
 
 local RefPlaceId = {
@@ -63,5 +64,5 @@ end)
 
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
-	loadstring(game:HttpGet(Script_Url))()
+	loadstring(game:HttpGet(prefix_url .. Script_Url))()
 end
