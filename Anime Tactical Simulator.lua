@@ -16,7 +16,7 @@ if #Ply_Fruit < 2 then
     return LocalPlayer:Kick("You need at least 2 devil fruits to use this script")
 end
 
-
+getgenv().RoyxLoaded = true
 while true do task.wait()
     if Player_Data.Rerolls["Devil Fruits"].Value == "Yami" then 
         for i,v in pairs(Ply_Fruit) do
