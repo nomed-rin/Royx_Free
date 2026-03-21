@@ -6,8 +6,11 @@ local Managements = require(game.ReplicatedStorage.Modules.Packets.Managements)
 local Packages_Equip = Managements:GetPacket("Inventory", "Equip")
 local Packages_UnEquip = Managements:GetPacket("Inventory", "Unequip")
 local Ply_Fruit = {}
-
+local Ply_HasYami = false
 for i,v in pairs(Player_Inventory.Rerolls:GetChildren()) do
+    if v.Name == "Yami" then
+        Ply_HasYami = true
+    end
     if v.Name ~= "Yami"then
         table.insert(Ply_Fruit, v.Name)
     end
@@ -15,7 +18,9 @@ end
 if #Ply_Fruit < 2 then
     return LocalPlayer:Kick("You need at least 2 devil fruits to use this script")
 end
-
+if not Ply_HasYami then
+    return LocalPlayer:Kick("You need Yami devil fruit to use this script")
+end
 getgenv().RoyxLoaded = true
 while true do task.wait()
     if Player_Data.Rerolls["Devil Fruits"].Value == "Yami" then 
