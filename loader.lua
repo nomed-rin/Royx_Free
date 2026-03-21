@@ -44,7 +44,7 @@ local Script_Tbl = {
 	[4931927012] = "Basketball%20Legends",
 	[5682590751] = "Lootify.lua",
 	[6884266247] = "Anime-Rangers-X",
-	[8459032065] = ""
+	[8459032065] = "Anime%20Tactical%20Simulator.lua"
 }
 
 local RefPlaceId = {
