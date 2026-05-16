@@ -44,7 +44,8 @@ local Script_Tbl = {
 	[4931927012] = "Basketball%20Legends",
 	[5682590751] = "Lootify.lua",
 	[6884266247] = "Anime-Rangers-X",
-	[8459032065] = "Anime%20Tactical%20Simulator.lua"
+	[8459032065] = "Anime%20Tactical%20Simulator.lua",
+	[6409513651] = "AnimeWarrior.lua"
 }
 
 local RefPlaceId = {
@@ -52,7 +53,8 @@ local RefPlaceId = {
 	[4931927012] = placeId,
 	[5682590751] = placeId,
 	[6884266247] = 72829404259339,
-	[8459032065] = 90738171169572
+	[8459032065] = 90738171169572,
+	[6409513651] = 18923620224
 }
 
 game.CoreGui.DescendantAdded:connect(function(Ins)
