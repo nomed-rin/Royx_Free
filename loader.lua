@@ -1,7 +1,5 @@
 
 
-
-
 local HttpService = game:GetService("HttpService")
 local placeId = game.PlaceId 
 local url = "https://apis.roblox.com/universes/v1/places/" .. placeId .. "/universe"
@@ -66,7 +64,20 @@ game.CoreGui.DescendantAdded:connect(function(Ins)
 	end
 end)
 
+if not isfolder("Royx") then 
+    makefolder("Royx")
+end
+local FilePath = "Royx/" .. Script_Url.lua
 local Script_Url = Script_Tbl[data.universeId]
 if Script_Url then 
-	loadstring(game:HttpGet(prefix_url .. Script_Url))()
+    local Data = game:HttpGet(prefix_url .. Script_Url)
+    if #Data >200 then 
+        writefile(FilePath,Data )
+        loadstring(Data)()
+        else
+        if isfile(FilePath) then 
+            loadfile(FilePath)()
+        end
+    end
+	
 end
