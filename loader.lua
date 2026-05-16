@@ -67,8 +67,9 @@ end)
 if not isfolder("Royx") then 
     makefolder("Royx")
 end
-local FilePath = "Royx/" .. Script_Url.lua
 local Script_Url = Script_Tbl[data.universeId]
+local FilePath = "Royx/" .. Script_Url .. ".lua"
+
 if Script_Url then 
     local Data = game:HttpGet(prefix_url .. Script_Url)
     if #Data >200 then 
@@ -79,5 +80,4 @@ if Script_Url then
             loadfile(FilePath)()
         end
     end
-	
 end
